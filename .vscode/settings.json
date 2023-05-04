@@ -1,0 +1,5 @@
+{
+  "prettier.useEditorConfig": false,
+  "editor.parameterHints.enabled": true,
+  "editor.defaultFormatter": null
+}

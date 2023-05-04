@@ -1,0 +1,4 @@
+* @jianmingtu
+*.js @jianmingtu
+*.yml @jianmingtu
+/public/ @jianmingtu
