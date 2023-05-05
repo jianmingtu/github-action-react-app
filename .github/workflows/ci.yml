@@ -23,15 +23,15 @@ jobs:
           node-version: "18.x"
           cache: "npm"
       - run: npm ci
+      - run: npm run format:check
+      - run: npm test -- --coverage
+        env:
+          CI: true
       - name: upload test coverage
         uses: actions/upload-artifact@v1
         with:
           name: code-coverage
           path: coverage
-      - run: npm run format:check
-      - run: npm test -- --coverage
-        env:
-          CI: true
       - name: build project
         if: github.event_name == 'push'
         run: npm run build
