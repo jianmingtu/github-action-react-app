@@ -23,6 +23,11 @@ jobs:
           node-version: "18.x"
           cache: "npm"
       - run: npm ci
+      - name: upload test coverage
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage
+          path: coverage
       - run: npm run format:check
       - run: npm test -- --coverage
         env:
@@ -30,6 +35,11 @@ jobs:
       - name: build project
         if: github.event_name == 'push'
         run: npm run build
+      - name: upload build folder
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
       - name: Deploy to staging
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain faded-bat.surge.sh
