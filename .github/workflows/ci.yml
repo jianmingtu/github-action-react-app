@@ -2,6 +2,8 @@ name: CI-1
 on:
   pull_request:
     branches: [develop]
+  push:
+    branches: [develop]
 
 jobs:
   build:
