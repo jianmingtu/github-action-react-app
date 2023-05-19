@@ -1,7 +1,7 @@
 {
   "arrowParens": "always",
   "bracketSameLine": false,
-  "bracketSpacing": true,
+  "bracketSpacing": false,
   "embeddedLanguageFormatting": "auto",
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
@@ -12,9 +12,9 @@
   "requirePragma": false,
   "semi": true,
   "singleAttributePerLine": false,
-  "singleQuote": false,
+  "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
-  "vueIndentScriptAndStyle": false
+  "vueIndentScriptAndStyle": true
 }
