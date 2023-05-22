@@ -1,15 +1,16 @@
 name: CI
 on:
   pull_request:
-    branches: [develop, main]
+    branches: [main, develop]
+
   push:
-    branches: [develop, main]
+    branches: [main, develop]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write #to be able to publish a Github release
+      contents: write
       issues: write #to be able to comment on released issues
       pull-requests: write #to be able to comments on release pull requests
     steps:
