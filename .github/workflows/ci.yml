@@ -58,7 +58,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
         run: npx surge --project ./build --domain faded-bat.surge.sh
       - name: Deploy to production
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx surge --project ./build --domain prod-react-app.surge.sh
       - name: Upload coverage
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
